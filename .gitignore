@@ -1,0 +1,59 @@
+# =============================== OS files ===============================
+.DS_Store
+Thumbs.db
+
+# =============================== IntelliJ IDEA ===============================
+.idea/
+*.iml
+*.iws
+out/
+
+# =============================== Eclipse ===============================
+.project
+.classpath
+.settings/
+bin/
+
+# =============================== VS Code ===============================
+.vscode/
+
+# =============================== Java / Spring Boot ===============================
+antigasp/target/
+antigasp/*.log
+antigasp/*.class
+
+# Maven
+antigasp/.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+antigasp/.gradle/
+antigasp/build/
+
+# Spring Boot specific
+antigasp/application.properties
+antigasp/application.yml
+antigasp/*.sql
+
+# Config
+antigasp/.env
+
+# =============================== Angular / Node ===============================
+front/node_modules/
+front/dist/
+front/.angular/
+front/.tmp/
+front/out-tsc/
+
+# Logs
+front/npm-debug.log*
+front/yarn-debug.log*
+front/yarn-error.log*
+
+# Environment files
+front/.env
+front/.env.*
+
+# =============================== Misc ===============================
+coverage/
+*.tmp
+*.swp
