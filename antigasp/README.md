@@ -2,18 +2,16 @@
 
 ## Set up
 
-To run the app:
-
 1. Create a database in PostgreSQL:
 
-```bash
-# Replace <database_name> by a name at your choice
+```sql
+-- Replace <database_name> by a name of your choice
 CREATE DATABASE <database_name>;
 ```
 
-2. Add the properties to connect to the database:
+2. Configure database connection
 
-- You can add it directly in the file _application.properties_ like the example below:
+Option A — Directly in _application.properties_:
 
 ```properties
 # Replace <...> by your true database properties
@@ -22,7 +20,9 @@ spring.datasource.username=<username>
 spring.datasource.password=<password>
 ```
 
-- Or, create a _.env_ file and declare your properties there:
+Option B — Using a .env file :
+
+  - Create a _.env_ file at the root of backend project (**antigasp/**):
 
 ```env
 # Replace <...> by your true database properties
@@ -30,5 +30,28 @@ DB_URL=jdbc:postgresql://localhost:5432/<database_name>
 DB_USERNAME=<username>
 DB_PASSWORD=<password>
 ```
+
+  - Then make sure they keep referenced in application.properties:
+
+```properties
+spring.datasource.url=${DB_URL}
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
+```
 > Spring will retrieve these values ​​from the system environment variables.
 
+---
+
+## Running
+
+If you use _.env_ file, in **antigasp/** directory:
+
+```bash
+./run.sh
+```
+
+If not:
+
+```bash
+./mvnw spring-boot:run
+```
