@@ -32,7 +32,7 @@ antigasp/build/
 # Spring Boot specific
 antigasp/application.properties
 antigasp/application.yml
-antigasp/*.sql
+antigasp/src/main/resources/db/init.sql
 
 # Config
 antigasp/.env
