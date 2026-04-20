@@ -49,6 +49,7 @@ If you use _.env_ file, in **antigasp/** directory:
 ```bash
 ./run.sh
 ```
+> Only for the first time.
 
 If not:
 
