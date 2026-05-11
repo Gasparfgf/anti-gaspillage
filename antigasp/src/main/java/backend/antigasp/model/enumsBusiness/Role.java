@@ -1,4 +1,4 @@
-package backend.antigasp.entity;
+package backend.antigasp.model.enumsBusiness;
 
 public enum Role {
 	CLIENT,

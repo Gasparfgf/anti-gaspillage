@@ -1,8 +1,9 @@
-package backend.antigasp.entity;
+package backend.antigasp.model.entity;
 
 import java.sql.Date;
 import java.util.List;
 
+import backend.antigasp.model.enumsBusiness.Role;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
