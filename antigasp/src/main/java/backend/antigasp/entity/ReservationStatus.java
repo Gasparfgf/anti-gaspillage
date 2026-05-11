@@ -1,6 +1,6 @@
 package backend.antigasp.entity;
 
-public enum Status {
+public enum ReservationStatus {
 	RESERVED,
     PICKED_UP
 }
