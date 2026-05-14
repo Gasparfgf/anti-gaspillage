@@ -28,14 +28,21 @@ This web platform aims to allow retailers to publish their unsold items at the e
 
 ## Running the application
 
-### Backend
-
-Please, go and read the following [file](antigasp/README.md).
+To run the application, please, go and read the following files:
+* [running backend](antigasp/README.md).
+* [running frontend](antigasp-frontend/README.md)
 
 ## Justifications for development
 
 In these documents, i explain why some choices were made based in my logic and problems that i've encountered along the way.
 
 You can find the explanations:
-* for backend [here](./documents/back-justifications.md).
-* for frontend [here](./documents/front-justifications.md).
+* for backend [here](documents/back-justifications.md).
+* for frontend [here](documents/front-justifications.md).
+
+## Author
+
+**Name**: Gaspar da Rosa Francisco
+**(Personal) Email**: gaspardarosafrancisco@gmail.com
+**GitHub**: [Gasparfgf](https://github.com/Gasparfgf)
+**LinkedIn**: [Gaspar Francisco](https://www.linkedin.com/in/gaspar-francisco-5a4639203/)
