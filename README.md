@@ -4,7 +4,9 @@
 
 ### Table of content
 
-* [Context](#Context)
+* [Context](#context)
+* [Stack tech](#stack-tech)
+* [Running the application](#running-the-application)
 
 ### Context
 Every day, restaurants, bakeries, and supermarkets throw away unsold food.
@@ -24,7 +26,7 @@ This web platform aims to allow retailers to publish their unsold items at the e
 
 ---
 
-## Using the application
+## Running the application
 
 ### Backend
 
