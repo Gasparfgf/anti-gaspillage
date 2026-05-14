@@ -32,6 +32,8 @@ To run the application, please, go and read the following files:
 * [running backend](antigasp/README.md).
 * [running frontend](antigasp-frontend/README.md)
 
+---
+
 ## Justifications for development
 
 In these documents, i explain why some choices were made based in my logic and problems that i've encountered along the way.
@@ -39,6 +41,8 @@ In these documents, i explain why some choices were made based in my logic and p
 You can find the explanations:
 * for backend [here](documents/back-justifications.md).
 * for frontend [here](documents/front-justifications.md).
+
+---
 
 ## Author
 
