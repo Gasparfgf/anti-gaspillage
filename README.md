@@ -42,7 +42,7 @@ You can find the explanations:
 
 ## Author
 
-**Name**: Gaspar da Rosa Francisco
-**(Personal) Email**: gaspardarosafrancisco@gmail.com
-**GitHub**: [Gasparfgf](https://github.com/Gasparfgf)
-**LinkedIn**: [Gaspar Francisco](https://www.linkedin.com/in/gaspar-francisco-5a4639203/)
+* **Name**: Gaspar da Rosa Francisco
+* **(Personal) Email**: gaspardarosafrancisco@gmail.com
+* **GitHub**: [Gasparfgf](https://github.com/Gasparfgf)
+* **LinkedIn**: [Gaspar Francisco](https://www.linkedin.com/in/gaspar-francisco-5a4639203/)
