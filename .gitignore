@@ -9,9 +9,11 @@ Thumbs.db
 out/
 
 # =============================== Eclipse ===============================
-.project
-.classpath
-.settings/
+antigasp/.project
+antigasp/.classpath
+antigasp/.settings/
+antigasp/*.classpath
+antigasp/*.project
 bin/
 
 # =============================== VS Code ===============================
