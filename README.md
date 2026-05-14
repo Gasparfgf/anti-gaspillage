@@ -38,15 +38,16 @@ To run the application, please, go and read the following files:
 
 In these documents, i explain why some choices were made based in my logic and problems that i've encountered along the way.
 
-You can find the explanations:
-* for backend [here](documents/back-justifications.md).
-* for frontend [here](documents/front-justifications.md).
+You can find the explanations here:
+* [for backend](documents/back-justifications.md).
+* [for frontend](documents/front-justifications.md).
 
 ---
 
 ## Author
 
 * **Name**: Gaspar da Rosa Francisco
+* **Profession / Job**: Software engineer
 * **(Personal) Email**: gaspardarosafrancisco@gmail.com
 * **GitHub**: [Gasparfgf](https://github.com/Gasparfgf)
 * **LinkedIn**: [Gaspar Francisco](https://www.linkedin.com/in/gaspar-francisco-5a4639203/)
