@@ -1,8 +1,5 @@
 package backend.antigasp.model.entity;
 
-import java.sql.Date;
-import java.util.List;
-
 import backend.antigasp.model.enumsBusiness.Role;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -20,13 +17,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
-@Builder
+import java.time.LocalDate;
+import java.util.List;
+
 @Entity
-@Table(name = "users") // user is a reserved word in PostgreSQL.
+@Table(name = "users")
+@Getter @Setter
+@NoArgsConstructor @AllArgsConstructor
+@Builder
 public class User {
 
     @Id
@@ -34,20 +32,22 @@ public class User {
     private Long id;
 
     @Column(nullable = false)
-    private String firstName;
+    private String firstname;
+
     @Column(nullable = false)
-    private String surName;
+    private String surname;
+
     @Column(nullable = false)
     private String address;
+
     @Column(name = "birth_date", nullable = false)
-    private Date birthDate;
-    @Column(unique = true)
+    private LocalDate birthDate;
+
+    @Column(nullable = false, unique = true)
     private String email;
+
     @Column(nullable = false)
     private String password;
-    @Column(nullable = false)
-    private Date created_at;
-    private boolean enabled = true;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
