@@ -32,3 +32,10 @@ This web platform aims to allow retailers to publish their unsold items at the e
 
 Please, go and read the following [file](antigasp/README.md).
 
+## Justifications for development
+
+In these documents, i explain why some choices were made based in my logic and problems that i've encountered along the way.
+
+You can find the explanations:
+* for backend [here](./documents/back-justifications.md).
+* for frontend [here](./documents/front-justifications.md).
