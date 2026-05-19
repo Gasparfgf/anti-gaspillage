@@ -9,51 +9,87 @@ Thumbs.db
 out/
 
 # =============================== Eclipse ===============================
-antigasp/.project
-antigasp/.classpath
-antigasp/.settings/
-antigasp/*.classpath
-antigasp/*.project
+backend/.project
+backend/.classpath
+backend/.settings/
+backend/*.classpath
+backend/*.project
 bin/
 
 # =============================== VS Code ===============================
 .vscode/
 
 # =============================== Java / Spring Boot ===============================
-antigasp/target/
-antigasp/*.log
-antigasp/*.class
+backend/target/
+backend/*.log
+backend/*.class
 
 # Maven
-antigasp/.mvn/wrapper/maven-wrapper.jar
+backend/.mvn/wrapper/maven-wrapper.jar
 
 # Gradle
-antigasp/.gradle/
-antigasp/build/
+backend/.gradle/
+backend/build/
 
 # Spring Boot specific
-antigasp/application.properties
-antigasp/application.yml
-antigasp/src/main/resources/db/init.sql
+backend/application.properties
+backend/application.yml
+backend/src/main/resources/db/init.sql
 
 # Config
-antigasp/.env
+backend/.env
+backend/.env.*
+backend/.env
+backend/.env.*
+
+
+backend/HELP.md
+backend/!**/src/main/**/target/
+backend/!**/src/test/**/target/
+
+### STS ###
+backend/.apt_generated
+backend/.factorypath
+backend/.settings
+backend/.springBeans
+backend/.sts4-cache
+
+### IntelliJ IDEA ###
+backend/.idea
+backend/*.iws
+backend/*.iml
+backend/*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+
 
 # =============================== Angular / Node ===============================
-front/node_modules/
-front/dist/
-front/.angular/
-front/.tmp/
-front/out-tsc/
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/.tmp/
+frontend/out-tsc/
 
 # Logs
-front/npm-debug.log*
-front/yarn-debug.log*
-front/yarn-error.log*
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
 
 # Environment files
-front/.env
-front/.env.*
+frontend/.env
+frontend/.env.*
 
 # =============================== Misc ===============================
 coverage/
