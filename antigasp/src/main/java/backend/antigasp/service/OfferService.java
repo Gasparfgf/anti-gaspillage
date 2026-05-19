@@ -1,17 +1,18 @@
 package backend.antigasp.service;
 
-import com.invendus.dto.request.OfferRequest;
-import com.invendus.dto.response.OfferResponse;
-import com.invendus.model.Offer;
-import com.invendus.model.User;
-import com.invendus.repository.OfferRepository;
-import com.invendus.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
+
+import backend.antigasp.dto.request.OfferRequest;
+import backend.antigasp.dto.response.OfferResponse;
+import backend.antigasp.model.entity.Offer;
+import backend.antigasp.model.entity.User;
+import backend.antigasp.repository.OfferRepository;
+import backend.antigasp.repository.UserRepository;
 
 import java.util.List;
 

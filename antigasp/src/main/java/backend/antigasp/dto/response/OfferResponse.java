@@ -1,4 +1,4 @@
-package backend.antigasp.dto.request;
+package backend.antigasp.dto.response;
 
 import lombok.Builder;
 import lombok.Data;

@@ -1,7 +1,7 @@
 package backend.antigasp.config;
 
 import backend.antigasp.security.JwtAuthFilter;
-import backend.antigasp.security.JwtService;
+import backend.antigasp.service.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
