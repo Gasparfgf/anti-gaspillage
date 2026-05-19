@@ -10,7 +10,7 @@ import backend.antigasp.dto.response.AuthResponse;
 import backend.antigasp.model.entity.User;
 import backend.antigasp.model.enumsBusiness.Role;
 import backend.antigasp.repository.UserRepository;
-import backend.antigasp.security.JwtService;
+import backend.antigasp.service.JwtService;
 
 @Service
 @RequiredArgsConstructor

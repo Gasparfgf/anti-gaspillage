@@ -1,4 +1,4 @@
-package backend.antigasp.security;
+package backend.antigasp.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
