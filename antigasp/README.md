@@ -2,12 +2,6 @@
 
 ---
 
-## Architecture
-
-![Architecture of the unsold goods platform](assets/architecture_overview.svg "architecture overview")
-
----
-
 ## Set up
 
 ### PostgreSQL database

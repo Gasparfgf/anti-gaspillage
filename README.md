@@ -26,6 +26,12 @@ This web platform aims to allow retailers to publish their unsold items at the e
 
 ---
 
+## Architecture
+
+![Architecture of the unsold goods platform](assets/architecture_overview.svg "architecture overview")
+
+---
+
 ## Running the application
 
 To run the application, please, go and read the following files:
