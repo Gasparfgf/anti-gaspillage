@@ -16,8 +16,16 @@ Unlike other entities, the User entity has its table name explicitly defined bec
 
 PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' - it will be selected by default.
 
+H2 was added to make Spring Boot tests run on H2 in memory without depending on PostgreSQL in unit tests.
+
 ## Code
 
 All injected fields must be final; otherwise, **@RequiredArgsConstructor** will not include them in the generated constructor, and they will remain null.
 
 > Lombok generates a constructor only for fields marked *final* or **@NonNull**. Fields marked without a final attribute are ignored.
+
+## Environment variables (.env)
+
+The environment variables are not immediately exposed. They have to be exposed before running backend, so application.properties takes the values needed.
+
+> To solve this situation, i added a dependency that can expose it automaticaly.
