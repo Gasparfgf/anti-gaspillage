@@ -67,6 +67,7 @@
 
 		<jwt.version>0.12.6</jwt.version>
 		<validation.version>4.0.5</validation.version>
+		<dotenv.version>4.0.0</dotenv.version>
 
 	</properties>
 
@@ -120,6 +121,12 @@
         </dependency>
 
 		<!-- Others -->
+		<!-- .env file -->
+		<dependency>
+		    <groupId>me.paulschwarz</groupId>
+		    <artifactId>spring-dotenv</artifactId>
+		    <version>${dotenv.version}</version>
+		</dependency>
         <!-- PostgreSQL -->
 		<dependency>
 			<groupId>org.postgresql</groupId>
@@ -153,6 +160,12 @@
 		    <groupId>io.github.cdimascio</groupId>
 		    <artifactId>dotenv-java</artifactId>
 		    <version>${env.version}</version>
+		</dependency>
+		<!-- H2 -->
+		<dependency>
+		    <groupId>com.h2database</groupId>
+		    <artifactId>h2</artifactId>
+		    <scope>test</scope>
 		</dependency>
 	</dependencies>
 
