@@ -103,7 +103,7 @@ spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.format_sql=true
 
 # JWT
-# app.jwt.secret=
+app.jwt.secret=a_very_long_secrete_key_with_32chars_min
 app.jwt.expiration=86400000
 
 # CORS (for dev)
