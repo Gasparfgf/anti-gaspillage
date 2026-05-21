@@ -56,4 +56,4 @@ You can find the explanations here:
 * **Profession / Job**: Software engineer
 * **(Personal) Email**: gaspardarosafrancisco@gmail.com
 * **GitHub**: [Gasparfgf](https://github.com/Gasparfgf)
-* **LinkedIn**: [Gaspar Francisco](https://www.linkedin.com/in/gaspar-francisco-5a4639203/)
+* **LinkedIn**: [Gaspar Francisco](https://www.linkedin.com/in/gaspar-francisco-gasparfgf/)
