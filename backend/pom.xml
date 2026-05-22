@@ -67,7 +67,7 @@
 
 		<jwt.version>0.12.6</jwt.version>
 		<validation.version>4.0.5</validation.version>
-		<dotenv.version>4.0.0</dotenv.version>
+		<dotenv.version>5.0.1</dotenv.version>
 
 	</properties>
 
