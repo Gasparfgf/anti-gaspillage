@@ -63,14 +63,14 @@ class OfferServiceTest {
         offer = Offer.builder()
                 .id(1L)
                 .title("Unsold sandwichs")
-                .description("5 end-of-day sandwiches")
+                .description("5 end-of-day sandwichs")
                 .price(3.50)
                 .merchant(merchant)
                 .build();
 
         offerRequest = new OfferRequest();
         offerRequest.setTitle("Unsold sandwichs");
-        offerRequest.setDescription("5 end-of-day sandwiches");
+        offerRequest.setDescription("5 end-of-day sandwichs");
         offerRequest.setPrice(3.50);
     }
 
@@ -86,7 +86,7 @@ class OfferServiceTest {
 
         // Assert
         assertThat(response).isNotNull();
-        assertThat(response.getTitle()).isEqualTo("Unsold sandwiches");
+        assertThat(response.getTitle()).isEqualTo("Unsold sandwichs");
         assertThat(response.getPrice()).isEqualTo(3.50);
         assertThat(response.getMerchantId()).isEqualTo(1L);
         verify(offerRepository, times(1)).save(any(Offer.class));
@@ -129,7 +129,7 @@ class OfferServiceTest {
         OfferResponse response = offerService.updateOffer(1L, offerRequest, "jean@example.com");
 
         // Assert
-        assertThat(response.getTitle()).isEqualTo("Nouveau titre");
+        assertThat(response.getTitle()).isEqualTo("New title");
         assertThat(response.getPrice()).isEqualTo(5.00);
         verify(offerRepository, times(1)).save(any(Offer.class));
     }
@@ -144,7 +144,7 @@ class OfferServiceTest {
         assertThatThrownBy(() ->
                 offerService.updateOffer(1L, offerRequest, "marie@example.com"))
                 .isInstanceOf(AccessDeniedException.class)
-                .hasMessageContaining("allowed");
+                .hasMessageContaining("authorized");
 
         verify(offerRepository, never()).save(any());
     }
@@ -185,7 +185,7 @@ class OfferServiceTest {
         assertThatThrownBy(() ->
                 offerService.deleteOffer(1L, "marie@example.com"))
                 .isInstanceOf(AccessDeniedException.class)
-                .hasMessageContaining("allowed");
+                .hasMessageContaining("authorized");
 
         verify(offerRepository, never()).delete(any());
     }

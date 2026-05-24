@@ -184,7 +184,7 @@ class ReservationServiceTest {
         assertThatThrownBy(() ->
                 reservationService.updateStatus(1L, ReservationStatus.PICKED_UP, "paul@example.com"))
                 .isInstanceOf(AccessDeniedException.class)
-                .hasMessageContaining("autorisé");
+                .hasMessageContaining("authorized");
 
         verify(reservationRepository, never()).save(any());
     }
@@ -206,7 +206,7 @@ class ReservationServiceTest {
         assertThatThrownBy(() ->
                 reservationService.updateStatus(1L, ReservationStatus.PICKED_UP, "jean@example.com"))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining("already recovered");
+                .hasMessageContaining("already been claimed");
 
         verify(reservationRepository, never()).save(any());
     }
