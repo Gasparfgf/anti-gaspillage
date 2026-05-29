@@ -1,0 +1,90 @@
+<div class="auth-container">
+    <div class="auth-card">
+        <h1>Créer un compte</h1>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+            <!-- Prénom -->
+            <div class="form-group">
+                <label for="firstname">Prénom</label>
+                <input id="firstname" type="text" formControlName="firstname"
+                    [class.invalid]="firstname.invalid && firstname.touched" />
+                @if (firstname.invalid && firstname.touched) {
+                    <span class="error">Le prénom est obligatoire.</span>
+                }
+            </div>
+
+            <!-- Nom -->
+            <div class="form-group">
+                <label for="surname">Nom</label>
+                <input id="surname" type="text" formControlName="surname"
+                        [class.invalid]="surname.invalid && surname.touched" />
+                @if (surname.invalid && surname.touched) {
+                    <span class="error">Le nom est obligatoire.</span>
+                }
+            </div>
+
+            <!-- Adresse -->
+            <div class="form-group">
+                <label for="address">Adresse</label>
+                <input id="address" type="text" formControlName="address"
+                        [class.invalid]="address.invalid && address.touched" />
+                @if (address.invalid && address.touched) {
+                    <span class="error">L'adresse est obligatoire.</span>
+                }
+            </div>
+
+            <!-- Date de naissance -->
+            <div class="form-group">
+                <label for="birthDate">Date de naissance</label>
+                <input id="birthDate" type="date" formControlName="birthDate"
+                        [class.invalid]="birthDate.invalid && birthDate.touched" />
+                @if (birthDate.invalid && birthDate.touched) {
+                    <span class="error">La date de naissance est obligatoire.</span>
+                }
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="email" formControlName="email"
+                        [class.invalid]="email.invalid && email.touched" />
+                @if (email.invalid && email.touched) {
+                    <span class="error">
+                        @if (email.errors?.['required']) { L'email est obligatoire. }
+                        @if (email.errors?.['email']) { Format d'email invalide. }
+                    </span>
+                }
+            </div>
+
+            <!-- Mot de passe -->
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input id="password" type="password" formControlName="password"
+                        [class.invalid]="password.invalid && password.touched" />
+                @if (password.invalid && password.touched) {
+                    <span class="error">
+                    @if (password.errors?.['required']) { Le mot de passe est obligatoire. }
+                    @if (password.errors?.['minlength']) { 8 caractères minimum. }
+                    </span>
+                }
+            </div>
+
+            <!-- Erreur API -->
+            @if (errorMessage) {
+                <div class="api-error">{{ errorMessage }}</div>
+            }
+
+            <!-- Submit -->
+            <button type="submit" [disabled]="form.invalid || loading">
+                {{ loading ? 'Inscription...' : "S'inscrire" }}
+            </button>
+
+        </form>
+
+        <p class="auth-link">
+            Déjà un compte ?
+            <a routerLink="/login">Se connecter</a>
+        </p>
+    </div>
+</div>
