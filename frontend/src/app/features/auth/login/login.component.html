@@ -1,0 +1,60 @@
+<div class="auth-container">
+    <div class="auth-card">
+        <h1>Connexion</h1>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+            <!-- Email -->
+            <div class="form-group">
+            <label for="email">Email</label>
+            <input
+                id="email"
+                type="email"
+                formControlName="email"
+                placeholder="jean@example.com"
+                [class.invalid]="email.invalid && email.touched"
+            />
+            @if (email.invalid && email.touched) {
+                <span class="error">
+                @if (email.errors?.['required']) { L'email est obligatoire. }
+                @if (email.errors?.['email']) { Format d'email invalide. }
+                </span>
+            }
+            </div>
+
+            <!-- Mot de passe -->
+            <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input
+                id="password"
+                type="password"
+                formControlName="password"
+                placeholder="••••••••"
+                [class.invalid]="password.invalid && password.touched"
+            />
+            @if (password.invalid && password.touched) {
+                <span class="error">
+                @if (password.errors?.['required']) { Le mot de passe est obligatoire. }
+                @if (password.errors?.['minlength']) { 8 caractères minimum. }
+                </span>
+            }
+            </div>
+
+            <!-- Erreur API -->
+            @if (errorMessage) {
+            <div class="api-error">{{ errorMessage }}</div>
+            }
+
+            <!-- Submit -->
+            <button type="submit" [disabled]="form.invalid || loading">
+            {{ loading ? 'Connexion...' : 'Se connecter' }}
+            </button>
+
+        </form>
+
+        <p class="auth-link">
+            Pas encore de compte ?
+            <a routerLink="/register">S'inscrire</a>
+        </p>
+    </div>
+</div>
