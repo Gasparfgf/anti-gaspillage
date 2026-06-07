@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { environment } from '../../../environments/environment';
@@ -14,23 +14,38 @@ export interface AuthResponse {
     role: Role;
 }
 
+export interface LoginRequest {
+    email: string;
+    password: string;
+}
+
+export interface RegisterRequest {
+    firstname: string;
+    surname: string;
+    address: string;
+    birthDate: string;
+    email: string;
+    password: string;
+}
+
 @Injectable({ providedIn: 'root' })
 export class AuthService {
+
+    private http = inject(HttpClient);
+    private router = inject(Router);
 
     private apiUrl = `${environment.apiUrl}/auth`;
     private currentUserSubject = new BehaviorSubject<AuthResponse | null>(this.loadUser());
 
     currentUser$ = this.currentUserSubject.asObservable();
 
-    constructor(private http: HttpClient, private router: Router) {}
-
-    register(data: any): Observable<AuthResponse> {
+    register(data: RegisterRequest): Observable<AuthResponse> {
         return this.http.post<AuthResponse>(`${this.apiUrl}/register`, data).pipe(
             tap(res => this.saveUser(res))
         );
     }
 
-    login(data: any): Observable<AuthResponse> {
+    login(data: LoginRequest): Observable<AuthResponse> {
         return this.http.post<AuthResponse>(`${this.apiUrl}/login`, data).pipe(
             tap(res => this.saveUser(res))
         );
