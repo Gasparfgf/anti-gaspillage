@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { Offer, OfferRequest } from '../../shared/models/offer.model';
@@ -7,9 +7,8 @@ import { Offer, OfferRequest } from '../../shared/models/offer.model';
 @Injectable({ providedIn: 'root' })
 export class OfferService {
 
+    private http = inject(HttpClient);
     private apiUrl = `${environment.apiUrl}/offers`;
-
-    constructor(private http: HttpClient) {}
 
     getAll(): Observable<Offer[]> {
         return this.http.get<Offer[]>(this.apiUrl);
