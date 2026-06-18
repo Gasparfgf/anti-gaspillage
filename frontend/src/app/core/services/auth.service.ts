@@ -6,25 +6,25 @@ import { environment } from '../../../environments/environment';
 import { Role } from '../../shared/models/user.model';
 
 export interface AuthResponse {
-  token: string;
-  userId: number;
-  email: string;
-  firstname: string;
-  role: Role;
+    token: string;
+    userId: number;
+    email: string;
+    firstname: string;
+    role: Role;
 }
 
 export interface RegisterRequest {
-  firstname: string;
-  surname: string;
-  address: string;
-  birthDate: string;
-  email: string;
-  password: string;
+    firstname: string;
+    surname: string;
+    address: string;
+    birthDate: string;
+    email: string;
+    password: string;
 }
 
 export interface LoginRequest {
-  email: string;
-  password: string;
+    email: string;
+    password: string;
 }
 
 @Injectable({ providedIn: 'root' })
