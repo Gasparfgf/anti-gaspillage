@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../../core/services/auth.service';
@@ -12,15 +12,15 @@ import { AuthService } from '../../../core/services/auth.service';
 })
 export class RegisterComponent {
 
+    private fb = inject(FormBuilder);
+    private authService = inject(AuthService);
+    private router = inject(Router);
+
     form: FormGroup;
     errorMessage = '';
     loading = false;
 
-    constructor(
-        private fb: FormBuilder,
-        private authService: AuthService,
-        private router: Router
-    ) {
+    constructor() {
         this.form = this.fb.group({
             firstname: ['', Validators.required],
             surname:   ['', Validators.required],
