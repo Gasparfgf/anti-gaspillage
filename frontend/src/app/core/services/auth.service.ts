@@ -3,8 +3,7 @@ import { Injectable, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { environment } from '../../../environments/environment';
-
-export type Role = 'ADMIN' | 'MERCHANT' | 'CLIENT';
+import { Role } from '../../shared/models/user.model';
 
 export interface AuthResponse {
     token: string;
@@ -14,16 +13,16 @@ export interface AuthResponse {
     role: Role;
 }
 
-export interface LoginRequest {
-    email: string;
-    password: string;
-}
-
 export interface RegisterRequest {
     firstname: string;
     surname: string;
     address: string;
     birthDate: string;
+    email: string;
+    password: string;
+}
+
+export interface LoginRequest {
     email: string;
     password: string;
 }
@@ -61,8 +60,12 @@ export class AuthService {
         return this.currentUserSubject.value?.token ?? null;
     }
 
-    getRole(): string | null {
+    getRole(): Role | null {
         return this.currentUserSubject.value?.role ?? null;
+    }
+
+    getCurrentUser(): AuthResponse | null {
+        return this.currentUserSubject.value;
     }
 
     isLoggedIn(): boolean {
