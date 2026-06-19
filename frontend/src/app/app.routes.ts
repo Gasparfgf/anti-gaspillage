@@ -1,4 +1,6 @@
 import { Routes } from '@angular/router';
+import { authGuard } from './core/guards/auth.guard';
+import { roleGuard } from './core/guards/role.guard';
 
 export const routes: Routes = [
     // Auth
@@ -14,10 +16,10 @@ export const routes: Routes = [
     },
 
     // Public
-    /*{
+    {
     path: 'offers',
     loadComponent: () =>
-        import('./features/offers/offers-list/offers-list.component').then(m => m.OffersListComponent)
+        import('./features/offers/offers-list/offers-list').then(m => m.OffersList)
     },
 
     // Client
@@ -25,8 +27,8 @@ export const routes: Routes = [
     path: 'my-reservations',
     canActivate: [authGuard, roleGuard(['CLIENT'])],
     loadComponent: () =>
-        import('./features/reservations/my-reservations/my-reservations.component')
-        .then(m => m.MyReservationsComponent)
+        import('./features/reservations/my-reservations/my-reservations')
+        .then(m => m.MyReservations)
     },
 
     // Merchant
@@ -34,8 +36,8 @@ export const routes: Routes = [
     path: 'merchant',
     canActivate: [authGuard, roleGuard(['MERCHANT'])],
     loadComponent: () =>
-        import('./features/merchant/merchant-dashboard/merchant-dashboard.component')
-        .then(m => m.MerchantDashboardComponent)
+        import('./features/merchant/merchant-dashboard/merchant-dashboard')
+        .then(m => m.MerchantDashboard)
     },
 
     // Admin
@@ -43,9 +45,9 @@ export const routes: Routes = [
     path: 'admin',
     canActivate: [authGuard, roleGuard(['ADMIN'])],
     loadComponent: () =>
-        import('./features/admin/admin-dashboard/admin-dashboard.component')
-        .then(m => m.AdminDashboardComponent)
-    },*/
+        import('./features/admin/admin-dashboard/admin-dashboard')
+        .then(m => m.AdminDashboard)
+    },
 
     // Fallback
     { path: 'unauthorized', redirectTo: '/offers' },
