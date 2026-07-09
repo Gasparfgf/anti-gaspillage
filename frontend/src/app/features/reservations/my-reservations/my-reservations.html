@@ -1,0 +1,31 @@
+<div class="page-container">
+    <h1>Mes réservations</h1>
+
+    @if (errorMessage) {
+        <div class="error-banner">{{ errorMessage }}</div>
+    }
+
+    @if (loading) {
+        <p class="loading-text">Chargement...</p>
+    } @else if (reservations.length === 0) {
+        <p class="empty-text">Vous n'avez aucune réservation pour le moment.</p>
+    } @else {
+        <div class="reservations-list">
+            @for (reservation of reservations; track reservation.id) {
+                <div class="reservation-card">
+                    <div class="reservation-info">
+                    <h2>{{ reservation.offerTitle }}</h2>
+                    <p>Vendeur : {{ reservation.userName }}</p>
+                    </div>
+                    <span
+                    class="status-badge"
+                    [class.status-reserved]="reservation.status === 'RESERVED'"
+                    [class.status-picked-up]="reservation.status === 'PICKED_UP'"
+                    >
+                    {{ reservation.status === 'RESERVED' ? 'En attente' : 'Récupérée' }}
+                    </span>
+                </div>
+            }
+        </div>
+    }
+</div>
