@@ -19,7 +19,7 @@ export const routes: Routes = [
     {
     path: 'offers',
     loadComponent: () =>
-        import('./features/offers/offers-list/offers-list').then(m => m.OffersList)
+        import('./features/offers/offers-list/offers-list').then(m => m.OffersListComponent)
     },
 
     // Client

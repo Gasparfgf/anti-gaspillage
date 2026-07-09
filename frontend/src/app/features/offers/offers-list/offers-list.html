@@ -1,0 +1,42 @@
+<p>offers-list works!</p>
+<div class="page-container">
+    <h1>Offres disponibles</h1>
+
+    @if (successMessage) {
+        <div class="success-banner">{{ successMessage }}</div>
+    }
+
+    @if (errorMessage) {
+        <div class="error-banner">{{ errorMessage }}</div>
+    }
+
+    @if (loading) {
+        <p class="loading-text">Chargement des offres...</p>
+    } @else if (offers.length === 0) {
+        <p class="empty-text">Aucune offre disponible pour le moment.</p>
+    } @else {
+        <div class="offers-grid">
+            @for (offer of offers; track offer.id) {
+                <div class="offer-card">
+                    <h2>{{ offer.title }}</h2>
+                    <p class="offer-description">{{ offer.description }}</p>
+                    <p class="offer-merchant">Vendu par {{ offer.merchantName }}</p>
+                    <p class="offer-price">{{ offer.price | number:'1.2-2' }} €</p>
+
+                    @if (isClient()) {
+                        <button
+                            (click)="reserve(offer.id)"
+                            [disabled]="reservingId === offer.id"
+                        >
+                            {{ reservingId === offer.id ? 'Réservation...' : 'Réserver' }}
+                        </button>
+                    } @else if (!isLoggedIn()) {
+                        <button (click)="reserve(offer.id)">
+                            Réserver
+                        </button>
+                    }
+                </div>
+            }
+        </div>
+    }
+</div>
