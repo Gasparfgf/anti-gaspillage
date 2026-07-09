@@ -28,7 +28,7 @@ export const routes: Routes = [
     canActivate: [authGuard, roleGuard(['CLIENT'])],
     loadComponent: () =>
         import('./features/reservations/my-reservations/my-reservations')
-        .then(m => m.MyReservations)
+        .then(m => m.MyReservationsComponent)
     },
 
     // Merchant
